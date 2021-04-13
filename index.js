@@ -1,8 +1,6 @@
 const puppeteer = require('puppeteer');
 const { performance } = require('perf_hooks');
 
-const start = performance.now();
-
 (async () => {
     const browser = await puppeteer.launch({
         headless: false,
@@ -30,6 +28,3 @@ const start = performance.now();
     await page.click('button[type="submit"]')
 
   })();
-  const finish = performance.now()
-  console.log(finish - start)
-
